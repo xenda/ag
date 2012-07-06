@@ -1,0 +1,18 @@
+%meta{:charset=>"utf-8"}/
+%meta{'http-equiv'=>"X-UA-Compatible", :content=>"IE=edge,chrome=1"}/
+%title
+  = @item[:title]
+%meta{ :name=>"viewport", :content=>"width=device-width,initial-scale=1,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"}/
+
+- if (@site.config[:environment] == 'dev')
+  %link{ :rel=> "stylesheet", :href=> get_path << 'css/normalize.css', :type=> "text/css"}
+  %link{ :rel=> "stylesheet", :href=> get_path <<'css/style.css', :type=> "text/css"}
+  /[if IE]
+    %link{ :rel=> "stylesheet", :href=> get_path <<'css/ie.css', :type=> "text/css"}
+
+- else
+  %link{ :rel=> "stylesheet", :href=> get_path << 'css/ag-min.css', :type=> "text/css"}
+  /[if IE]
+    %link{ :rel=> "stylesheet", :href=> get_path << 'css/ie-min.css', :type=> "text/css"}
+
+%script{:src=> get_path << 'js/libs/modernizr-min.js'}
