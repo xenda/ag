@@ -1,0 +1,15 @@
+!!! 5
+<!--[if lt IE 7 ]> <html lang="es" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" class="no-js ie oldie ie6"> <![endif]-->
+<!--[if IE 7 ]> <html lang="es" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" class="no-js ie oldie ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="es" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" class="no-js ie oldie ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="es" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" class="no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="es" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" lang="es" class="no-js"> <!--<![endif]-->
+  
+%head
+  = render 'main-parts/head'
+%body
+  = render 'main-parts/header'
+  = yield
+  = render 'main-parts/footer'
+  = render 'main-parts/scripts'  
+</html>
