@@ -4,3 +4,4 @@
 .buildpath
 tmp/
 output/
+crash.log
