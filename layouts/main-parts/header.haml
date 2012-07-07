@@ -1,0 +1,32 @@
+:ruby
+  items = Array.new
+  
+  items << {:href=>'#', :text=>'Home'}
+  items << {:href=>'#', :text=>'Empresa'}
+  items << {:href=>'#', :text=>'Fabricación'}
+  items << {:href=>'#', :text=>'Contacto'}
+
+%header#header.main-shadow
+  .wrapper
+    %a#logo{:title=>'AG Flexibilidad confiable',:href=>'#'}
+    #join-facebook
+      Sumate a nuestra red
+      %a{:href=>'#'}Facebook
+    %nav#primary-nav
+      %ul.clearfix
+        - items.each do |item|
+          %li.primary-item<
+            %a{:title=>item[:text], :href=>item[:href]}<
+              = item[:text]
+    %ul#language
+      %li.item
+        %a{:href=>'#'}English
+      %li.item
+        %a{:href=>'#'}Español
+    #fixed
+      %a{:href=>'#'}<
+        %span.facebook-logo
+        Facebook
+      %a{:href=>'#'}<
+        %span.search
+        Catálogo Online

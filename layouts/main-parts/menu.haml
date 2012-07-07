@@ -1,0 +1,18 @@
+:ruby
+  items = Array.new
+  
+  items << {:href=>'#', :text=>'personalizados', :id=>'per'}
+  items << {:href=>'#', :text=>'originales', :id=>'ori'}
+  items << {:href=>'#', :text=>'utilitarios', :id=>'uti'}
+  items << {:href=>'#', :text=>'deportivos', :id=>'dep'}  
+  items << {:href=>'#', :text=>'competición', :id=>'com'}
+  items << {:href=>'#', :text=>'exposición', :id=>'exp'}
+
+%nav#secondary-nav.main-shadow
+  %ul.clearfix.wrapper.main-menu
+    - items.each do |item|
+      %li.secondary-item<
+        %a{:title=>item[:text], :href=>item[:href]}<
+          Vehículos #{item[:text]}
+        .sub-menu{:id=>item[:id]}
+          = render 'menu/' << item[:id]

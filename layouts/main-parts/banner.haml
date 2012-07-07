@@ -1,0 +1,14 @@
+%section#banner
+  - if @item[:page] == 'home'
+    #slide
+      .slide-1.slide.active
+      .slide-2.slide{:data => {:slide => 'slide-2'}}
+    
+  .main-shadow
+    - if @item[:page] == 'home'
+      .wrapper
+        %a{:href=>'#'}Tuning Center
+        .stand
+          Visitenos en nuestro stand en:
+          %span<
+            Automechanika Argentina

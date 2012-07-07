@@ -6,9 +6,9 @@
 
 - if (@site.config[:environment] == 'dev')
   %link{ :rel=> "stylesheet", :href=> get_path << 'css/normalize.css', :type=> "text/css"}
-  %link{ :rel=> "stylesheet", :href=> get_path <<'css/style.css', :type=> "text/css"}
+  %link{ :rel=> "stylesheet", :href=> get_path << 'css/style.css', :type=> "text/css"}
   /[if IE]
-    %link{ :rel=> "stylesheet", :href=> get_path <<'css/ie.css', :type=> "text/css"}
+    %link{ :rel=> "stylesheet", :href=> get_path << 'css/ie.css', :type=> "text/css"}
 
 - else
   %link{ :rel=> "stylesheet", :href=> get_path << 'css/ag-min.css', :type=> "text/css"}

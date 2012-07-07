@@ -8,8 +8,14 @@
 %head
   = render 'main-parts/head'
 %body
+  .bg.bg-left
+  .bg.bg-right
   = render 'main-parts/header'
-  = yield
+  = render 'main-parts/menu'
+  = render 'main-parts/banner'
+  %section#container.main-shadow
+    .wrapper
+      = yield
   = render 'main-parts/footer'
   = render 'main-parts/scripts'  
 </html>

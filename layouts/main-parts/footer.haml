@@ -1,0 +1,57 @@
+:ruby
+  items = Array.new
+  
+  items << {:href=>'#', :text=>'Home'}
+  
+  sub = Array.new
+  sub << {:href=>'#', :text=>'Historia'}
+  sub << {:href=>'#', :text=>'Filosofía'}
+  items << {:href=>'#', :text=>'Empresa', :sub=>sub}
+
+  sub = Array.new
+  sub << {:href=>'#', :text=>'Calidad'}
+  sub << {:href=>'#', :text=>'Procesos'}
+  sub << {:href=>'#', :text=>'Tecnología'}  
+  items << {:href=>'#', :text=>'Fabricación', :sub=>sub}
+  
+  items << {:href=>'#', :text=>'Contacto'}
+
+%footer#footer.main-shadow
+  .wrapper
+    .footer-top
+    .footer-middle
+      .contact-info
+        %a.logo{:href=>'#'}
+        %ul
+          %li<
+            Calle 133 Nº 2434 - (1650)
+          %li<
+            CP - San Martín
+          %li<
+            Buenos Aires - Argentina.
+          %li<
+            Tel: (54-11) 4734 1708
+          %li<
+            Fax: (54-11) 4734 1724
+      .news
+        %p
+          Enterate de todas nuestras novedades y participá de concursos sumandote:
+          %a{:href=>'#'}
+            %span.facebook-logo
+            AG Resortes 
+      %ul#footer-nav.clearfix
+        - items.each do |item|
+          %li.item<
+            %a{:title=>item[:text], :href=>item[:href]}<
+              = item[:text]
+            - if item[:sub] != nil
+              %ul.sub-menu
+                - item[:sub].each do |sub|
+                  %li<
+                    %a{:title=>sub[:text], :href=>sub[:href]}<
+                      = sub[:text]
+    .footer-bottom
+      .copyright
+        &copy; AG 2012- Todos los derechos reservados
+      .das
+        Diseñado por DAS Branding &amp; Design
