@@ -1,32 +1,26 @@
-:ruby
-  items = Array.new
-  
-  items << {:href=>'#', :text=>'Home'}
-  items << {:href=>'#', :text=>'Empresa'}
-  items << {:href=>'#', :text=>'Fabricación'}
-  items << {:href=>'#', :text=>'Contacto'}
+- menus = get_menu
 
 %header#header.main-shadow
   .wrapper
-    %a#logo{:title=>'AG Flexibilidad confiable',:href=>'#'}
-    #join-facebook
+    %a.ag-logo{:title=>'AG Flexibilidad confiable',:href=>'#'}
+    .join-facebook
       Sumate a nuestra red
-      %a{:href=>'#'}Facebook
-    %nav#primary-nav
+      %a.link{:href=>'#'}Facebook
+    %nav#primary-nav.header-nav
       %ul.clearfix
-        - items.each do |item|
-          %li.primary-item<
-            %a{:title=>item[:text], :href=>item[:href]}<
-              = item[:text]
-    %ul#language
+        - menus.each do |item|
+          %li.item<
+            %a{:title=>item[:title], :href=> get_path << item[:href] << '.html'}<
+              = item[:title]
+    %ul#language.header-nav
       %li.item
         %a{:href=>'#'}English
       %li.item
         %a{:href=>'#'}Español
     #fixed
-      %a{:href=>'#'}<
-        %span.facebook-logo
+      %a.facebook{:href=>'#'}<
+        %span.logo
         Facebook
-      %a{:href=>'#'}<
-        %span.search
+      %a.search{:href=>'#'}<
+        %span.glass
         Catálogo Online

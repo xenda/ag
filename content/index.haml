@@ -3,4 +3,74 @@ title: 'titulo'
 page: 'home'
 ---
 
-mori!
+:ruby
+  support = Array.new
+  
+  support << {:title => 'Recomendaciones', :href => '#'}
+  support << {:title => 'Conozca más', :href => '#'}
+  support << {:title => 'Calculadora de resortes', :href => '#'}
+  support << {:title => 'Tabla de medidas', :href => '#'}
+  
+  tunning = Array.new
+  
+  tunning << {:text => 'Asesoramiento profesional.'}
+  tunning << {:text => 'Atención especializada.'}
+  tunning << {:text => 'Velocidad y eficacia en la colocación del Kit.'}
+  tunning << {:text => 'Garantía original AG.'}
+  tunning << {:text => 'Colocación del Kit número uno de'}
+  tunning << {:text => 'Latinoamérica que se exporta a USA y a Europa.'}
+
+%header.header-container
+.content
+  %article
+    %header
+      %img{:src=>'#', :width=>300, :height=>150}
+    
+    .content
+      %h2
+        %a{:href=>'#'}Todos nuestro productos
+      %h3 Encuentre la suspensión correcta para su vehículo.
+      %a{:href=>'#'}Click aquí para ingresar al buscador
+      
+      %h2
+        %a{:href=>'#'}Catálogo
+      %h3 Desde aquí puede bajar nuestro catálogo completo en formato pdf.
+      %a{:href=>'#'}
+        %span.bullet  AG Catálogo 2012
+        
+      %h2
+        %a{:href=>'#'}Soporte técnico
+      %ul
+        - support.each do |item|
+          %li
+            %a{:href=> item[:href], :title=> item[:title]}
+              %span.bullet
+                = item[:title]
+  %article
+    %header
+      %img{:src=>'#', :width=>300, :height=>150}
+    .content
+      %h2 Ventajas
+      %ul
+        %li
+          %span.bullet Certificación ISO 9001
+          %p Todos los procesos de fabricación de los resortes AG están certificados bajo los estándares ISO 9001.
+        %li
+          %span.bullet Garantía escrita por dos años.
+        %li
+          %span.bullet Fabricados con aceros de primera calidad.
+
+      %h2 Tuning Center
+      %ul
+        - tunning.each do |item|
+          %li
+            %span.bullet
+              = item[:text]
+
+
+  %article
+    %header
+      %img{:src=>'#', :width=>300, :height=>150}
+    
+    .content
+      .fb-like-box{:data => {:header=>"false", :stream=>'true', :'border-color'=>'white', :width=>'292', :href => 'http://www.facebook.com/platform', :'show-faces'=>'false' }}    
