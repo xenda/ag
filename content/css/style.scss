@@ -61,6 +61,8 @@
 	$h: 258px;
 	$w:39px;
 	
+	display:none;
+	
 	width:$w;
 	height:$h;
 	position: fixed;
@@ -282,4 +284,26 @@
     float:left;
   } 
   
+}
+
+.home {
+	
+	#container {
+	  
+	  article {
+	    width: 318px;
+	    float: left;
+	    margin-top: -82px;
+	    
+	    header {
+	      height: 159px;
+	      text-align: center;
+	      background: url(../images/home-image-bg.png) no-repeat center top;
+	      padding-top: 9px;
+	    }	    
+	  }
+	  
+	  .item-1 {margin-left: 20px;}
+	  .item-3 {margin-right: 20px;}
+  }
 }

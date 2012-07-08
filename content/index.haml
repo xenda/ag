@@ -1,6 +1,7 @@
 ---
 title: 'titulo'
 page: 'home'
+class: 'home'
 ---
 
 :ruby
@@ -21,10 +22,10 @@ page: 'home'
   tunning << {:text => 'Latinoamérica que se exporta a USA y a Europa.'}
 
 %header.header-container
-.content
-  %article
+.content.clearfix
+  %article.item-1
     %header
-      %img{:src=>'#', :width=>300, :height=>150}
+      %img{:src=>'images/home-1.jpg', :width=>300, :height=>150}
     
     .content
       %h2
@@ -46,9 +47,9 @@ page: 'home'
             %a{:href=> item[:href], :title=> item[:title]}
               %span.bullet
                 = item[:title]
-  %article
+  %article.item-2
     %header
-      %img{:src=>'#', :width=>300, :height=>150}
+      %img{:src=>'images/home-2.jpg', :width=>300, :height=>150}
     .content
       %h2 Ventajas
       %ul
@@ -67,10 +68,9 @@ page: 'home'
             %span.bullet
               = item[:text]
 
-
-  %article
+  %article.item-3
     %header
-      %img{:src=>'#', :width=>300, :height=>150}
+      %img{:src=>'images/home-3.jpg', :width=>300, :height=>150}
     
     .content
       .fb-like-box{:data => {:header=>"false", :stream=>'true', :'border-color'=>'white', :width=>'292', :href => 'http://www.facebook.com/platform', :'show-faces'=>'false' }}    

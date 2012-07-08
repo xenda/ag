@@ -7,7 +7,7 @@
   
 %head
   = render 'main-parts/head'
-%body
+%body{:class=>@item[:class] ,:data=>{:page => @item[:page]}}
   .bg.bg-left
   .bg.bg-right
   = render 'main-parts/header'
