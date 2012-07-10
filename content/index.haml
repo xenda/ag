@@ -22,51 +22,53 @@ class: 'home'
   tunning << {:text => 'Latinoamérica que se exporta a USA y a Europa.'}
 
 %header.header-container
-.content.clearfix
+#content.content.clearfix
   %article.item-1
     %header
       %img{:src=>'images/home-1.jpg', :width=>300, :height=>150}
     
     .content
-      %h2
-        %a{:href=>'#'}Todos nuestro productos
-      %h3 Encuentre la suspensión correcta para su vehículo.
+      %h2.entry-title Todos nuestro productos
+      %h3.dropline Encuentre la suspensión correcta para su vehículo.
       %a{:href=>'#'}Click aquí para ingresar al buscador
       
-      %h2
-        %a{:href=>'#'}Catálogo
-      %h3 Desde aquí puede bajar nuestro catálogo completo en formato pdf.
+      %h2.entry-title Catálogo
+      %h3.dropline Desde aquí puede bajar nuestro catálogo completo en formato pdf.
       %a{:href=>'#'}
-        %span.bullet  AG Catálogo 2012
+        %span.bullet &gt;
+        AG Catálogo 2012
         
-      %h2
-        %a{:href=>'#'}Soporte técnico
+      %h2.entry-title Soporte técnico
       %ul
         - support.each do |item|
           %li
             %a{:href=> item[:href], :title=> item[:title]}
-              %span.bullet
-                = item[:title]
+              %span.bullet &gt;
+              = item[:title]
   %article.item-2
     %header
       %img{:src=>'images/home-2.jpg', :width=>300, :height=>150}
     .content
-      %h2 Ventajas
-      %ul
+      %h2.entry-title Ventajas
+      %ul.advantage
         %li
-          %span.bullet Certificación ISO 9001
+          %span.bullet &gt;
+          Certificación ISO 9001
           %p Todos los procesos de fabricación de los resortes AG están certificados bajo los estándares ISO 9001.
         %li
-          %span.bullet Garantía escrita por dos años.
+          %span.bullet &gt;
+          Garantía escrita por dos años.
         %li
-          %span.bullet Fabricados con aceros de primera calidad.
+          %span.bullet &gt;
+          Fabricados con aceros de primera calidad.
 
-      %h2 Tuning Center
+      %h2.entry-title Tuning Center
+      %h3.dropline Centros de Colocación especializados de Ag Kit Performance
       %ul
         - tunning.each do |item|
           %li
-            %span.bullet
-              = item[:text]
+            %span.bullet &gt;
+            = item[:text]
 
   %article.item-3
     %header

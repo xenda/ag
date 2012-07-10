@@ -52,9 +52,12 @@
 	}
 	
 	.content {
-	 min-height: 500px;
 	 background: white;
 	}
+}
+
+#content {
+	padding-bottom: 15px;
 }
 
 #fixed {
@@ -289,18 +292,66 @@
 .home {
 	
 	#container {
+	  $color:#58595B;
 	  
 	  article {
-	    width: 318px;
+	    $w:318px;
+	    $h:159px;
+	    $p:9px;
+	    width: $w;
 	    float: left;
 	    margin-top: -82px;
+	    color:$color;
+	    font-size:12px;
+	    min-height: 560px;
+	    
 	    
 	    header {
-	      height: 159px;
+	      
+	      height: $h - $p;
 	      text-align: center;
 	      background: url(../images/home-image-bg.png) no-repeat center top;
-	      padding-top: 9px;
-	    }	    
+	      padding: $p $p 0 $p;
+	      width: $w - ($p * 2);
+	    }
+	    
+	    a {
+	      color:$color;
+	    }
+	    
+	    .content {
+	      padding:0 $p;
+	     
+	    }
+	    
+	    .entry-title {
+	      color:#113C97;
+	      font-weight: normal;
+	      font-size: 19px;
+	      margin-top: 30px;
+	      
+	      &:first-child {
+	        margin-top:15px;
+	      }
+	    }
+	    .dropline {
+	      font-weight: bold;
+	      font-size:12px;
+	      margin-bottom: 10px;
+	      line-height:15px;
+	    }
+	    
+	    .advantage {
+	      li {
+	        font-weight: bold;
+	        margin-bottom: 10px;
+	      }
+	      
+	      p {
+	        font-weight: normal;
+	        margin: 0;
+	      }
+	    }   
 	  }
 	  
 	  .item-1 {margin-left: 20px;}
