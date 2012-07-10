@@ -57,7 +57,7 @@
 }
 
 #content {
-	padding-bottom: 15px;
+	padding-bottom: 25px;
 }
 
 #fixed {
@@ -136,19 +136,67 @@
 
 #footer {
 	
+  color:#A7A9AC;
+  font-size:11px;
+	
+	.contact-info{
+	  position:absolute;
+	  left: 30px;
+	  top: 16px;
+	  width: 190px;
+	  height: 77px;
+	  
+	  .logo {
+	    width:41px;
+	    height: 28px;
+	    position: absolute;
+	    left: 0;
+	    top: 0; 
+	    background: url(../images/footer-logo.png);
+	  }
+	  
+	  ul {
+	    margin-left: 60px;
+	  }
+	}
+	
+	.news {
+	  position: absolute;
+	  left: 300px;
+	}
+	
+	#footer-nav {
+	  position: absolute;
+	  right: 30px;
+	}
+	
+  .copyright,
+  .das {
+    margin-top: 7px;
+  }
+
+  .copyright {
+    float:left;
+    margin-left: 30px;
+  }
+
+  .das {
+    float:right;
+    margin-right: 30px;
+  }	
+	
 	.footer-top{
 	  height: 27px;
 	  background: #484848;
 	  border-bottom: solid 1px #212121;
-	  overflow: hidden;
 	}
 	
 	.footer-middle{
 	  background: #2b2b2b;
 	  border-top:solid 1px #3f3f3f;
 	  border-bottom:solid 1px #020202;
-	  overflow: hidden;
 	  height: 109px;
+	  position: relative;
 	}
 	
 	.footer-bottom{
@@ -303,7 +351,7 @@
 	    margin-top: -82px;
 	    color:$color;
 	    font-size:12px;
-	    min-height: 560px;
+	    min-height: 580px;
 	    
 	    
 	    header {
@@ -339,6 +387,10 @@
 	      font-size:12px;
 	      margin-bottom: 10px;
 	      line-height:15px;
+	    }
+	    
+	    .fb-like-box {
+	      margin-top: 15px;
 	    }
 	    
 	    .advantage {
