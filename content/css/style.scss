@@ -135,14 +135,16 @@
 }
 
 #footer {
+	$color:#A7A9AC;
 	
-  color:#A7A9AC;
+  color:$color;
   font-size:11px;
+  line-height:13px;
 	
 	.contact-info{
 	  position:absolute;
 	  left: 30px;
-	  top: 16px;
+	  top: 23px;
 	  width: 190px;
 	  height: 77px;
 	  
@@ -161,13 +163,63 @@
 	}
 	
 	.news {
-	  position: absolute;
-	  left: 300px;
+    left: 304px;
+    position: absolute;
+    top: 12px;
+    width: 150px;
+    
+    a {
+      $h:16px;
+      display:block;
+      text-decoration: none;
+      height:$h;
+      line-height:$h;
+      margin-top:11px;
+      color:$color;
+           
+      .facebook-logo {
+        height:$h;
+        width:$h;
+        background: url(../images/facebook-16x16.png);
+        float:left;
+        margin-right: 7px;
+      }
+    }
 	}
 	
 	#footer-nav {
 	  position: absolute;
 	  right: 30px;
+    top: 21px;
+    width: 315px;
+    
+    a {
+      color:$color;
+      text-decoration: none;
+      text-transform: uppercase;
+      
+      &.selected,
+      &:hover {
+        color:#538CFF;
+      }
+    }
+    
+    .sub-menu{
+      margin-top:13px;
+      
+	    a {
+	      text-transform: none;
+	    }
+    }   
+    
+    .item {
+      float:left;
+      margin-left: 30px;
+      
+      &:first-child {
+        margin-left:0;
+      }
+    }	  
 	}
 	
   .copyright,
