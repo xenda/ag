@@ -1,0 +1,26 @@
+:ruby
+
+  items = Array.new
+  
+  items << {:text=>'Desarrollados para exigencias extremas.'}
+  items << {:text=>'La más amplia variedad de modelos.'}
+  items << {:text=>'Desarrollos especiales.'}
+
+.header
+  .bg
+  .title
+    AG Kit
+    %span sport
+  .dropline
+    Vehículos #{text}
+.content
+  %ul
+    - items.each do |item|
+      %li<
+        %span.bullet<
+        =item[:text]
+        
+        
+        
+        
+ 

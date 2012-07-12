@@ -2,11 +2,11 @@
   items = Array.new
   
   items << {:href=>'#', :text=>'personalizados', :id=>'performance'}
-  items << {:href=>'#', :text=>'originales', :id=>'ori'}
-  items << {:href=>'#', :text=>'utilitarios', :id=>'uti'}
-  items << {:href=>'#', :text=>'deportivos', :id=>'dep'}  
-  items << {:href=>'#', :text=>'competición', :id=>'com'}
-  items << {:href=>'#', :text=>'exposición', :id=>'exp'}
+  items << {:href=>'#', :text=>'originales', :id=>'confort'}
+  items << {:href=>'#', :text=>'utilitarios', :id=>'heavy'}
+  items << {:href=>'#', :text=>'deportivos', :id=>'rally'}  
+  items << {:href=>'#', :text=>'competición', :id=>'sport'}
+  items << {:href=>'#', :text=>'exposición', :id=>'extreme'}
 
 %nav#secondary-nav.main-shadow
   %ul.clearfix.wrapper.main-menu
@@ -15,4 +15,4 @@
         %a{:title=>item[:text], :href=>item[:href]}<
           Vehículos #{item[:text]}
         .sub-menu{:id=>'sub-' << item[:id]}
-          = render 'menu/' << item[:id]
+          = render 'menu/' << item[:id], :text => item[:text]

@@ -2,9 +2,13 @@
 
   items = Array.new
   
-  items << {:text=>'Máxima suavidad y confort'}
-  items << {:text=>'Responden exactamente a las especificaciones originales del fabricante del vehículo.'}
-  items << {:text=>'Únicos con 2 años de garantía.'}
+  items << {:text=>'Reduce el centro de gravedad del vehículo.'}
+  items << {:text=>'Look deportivo.'}
+  items << {:text=>'Mejora la estabilidad y control al conducir.'}
+  items << {:text=>'Mejora la maniobrabilidad.'}
+  items << {:text=>'Reduce la carga aerodinámica.'}
+  items << {:text=>'Mantiene el confort original de marcha.'}
+  items << {:text=>'En conducción deportiva aprovecha al máximo la potencia del motor.'}
 
 .header
   .bg
@@ -12,9 +16,10 @@
     AG Kit
     %span performance
   .dropline
-    Vehículos Personalizados
+    Vehículos #{text}
 .content
   %ul
     - items.each do |item|
       %li<
+        %span.bullet<
         =item[:text]

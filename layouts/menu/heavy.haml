@@ -1,0 +1,21 @@
+:ruby
+
+  items = Array.new
+  
+  items << {:text=>'Diseñados específicamente para trabajo pesado.'}
+  items << {:text=>'Recomendados para vehículos con GNC, manteniendo la línea original.'}
+  items << {:text=>'Compensa el peso extra de carga en el vehículo.'}
+
+.header
+  .bg
+  .title
+    AG Kit
+    %span heavy
+  .dropline
+    Vehículos #{text}
+.content
+  %ul
+    - items.each do |item|
+      %li<
+        %span.bullet<
+        =item[:text] 

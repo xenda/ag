@@ -343,11 +343,16 @@
       color:white;
       font-family:'HandelGothicDLightRegular';
       text-decoration: none;
+      overflow: hidden;
     }
     
     &:first-child,
     &:last-child {
       width: 166px;
+    }
+    
+    &:hover .sub-menu {
+      display:block;
     }
   }
   
@@ -358,7 +363,8 @@
     left: 0;
     width: 100%;
     top: $h;
-    background: red;
+    background: url(../images/sub-bg.jpg);
+    color:white;
     
     .header {
       float:left;
@@ -376,6 +382,12 @@
         height: 205px;
       }
       
+      .dropline {
+		    padding-left: 5px;
+		    text-transform: capitalize;
+		    word-spacing: 5px;      
+      }
+      
       .title {
         text-transform:uppercase;
         color:white;
@@ -391,15 +403,78 @@
         }
       }
     }
+    
+    .content {
+	    display: table-cell;
+	    height: 205px;
+	    vertical-align: middle;
+	    width:375px;
+	    
+	    li {
+		    font-size: 11px;
+		    line-height: 11px;
+		    margin-bottom: 7px;
+		    padding-left: 19px;
+		    position: relative;
+	    }
+	    
+	    .bullet {
+	      display:block;
+	      width: 9px;
+	      height: 9px;
+	      background: #828282;
+	      position: absolute;
+	      left: 0;
+	      top:0;
+	    }    
+    }
   }
   
   #sub-performance {
-    display: block;
     
-    span {
+    .header span {
+      color:#69DE29;
+    }
+    
+    .content {
+      width:250px;
+    }
+  }
+  
+  #sub-confort {
+    
+    .header span {
+      color:#45C2FC;
+    }
+  }
+  
+  #sub-heavy {
+    
+    .header span {
       color:#69DE29;
     }
   }
+  
+  #sub-extreme {
+    
+    .header span {
+      color:#69DE29;
+    }
+  }
+  
+  #sub-sport {
+    
+    .header span {
+      color:#69DE29;
+    }
+  }
+  
+  #sub-rally {
+    
+    .header span {
+      color:#69DE29;
+    }
+  }        
 }
 
 .wrapper {

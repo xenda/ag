@@ -1,0 +1,21 @@
+:ruby
+
+  items = Array.new
+  
+  items << {:text=>'Reducen la altura original en 35 mm.'}
+  items << {:text=>'Mayor rigidez.'}
+  items << {:text=>'Incrementa la adherencia de las cubiertas al piso.'}
+
+.header
+  .bg
+  .title
+    AG Kit
+    %span rally
+  .dropline
+    Vehículos #{text}
+.content
+  %ul
+    - items.each do |item|
+      %li<
+        %span.bullet<
+        =item[:text]
