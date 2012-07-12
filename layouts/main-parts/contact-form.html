@@ -1,0 +1,32 @@
+:ruby
+  items = Array.new
+  
+  items << {:label => 'Nombre', :type => 'text', :id => 'name', :required => true}
+  items << {:label => 'Dirección', :type => 'text', :id => 'adress', :required => false}
+  items << {:label => 'Ciudad', :type => 'text', :id => 'city', :required => true}
+  items << {:label => 'País', :type => 'text', :id => 'country', :required => true}
+  items << {:label => 'Email', :type => 'text', :id => 'email', :required => true}
+  items << {:label => 'Teléfono', :type => 'text', :id => 'phone', :required => false}
+
+  items << {:label => 'Vehículo', :type => 'text', :id => 'vehicle', :required => true}
+  items << {:label => 'Año', :type => 'text', :id => 'year', :required => true}
+  items << {:label => 'Marca', :type => 'text', :id => 'brand', :required => true}
+  items << {:label => 'Modelo', :type => 'text', :id => 'model', :required => true} 
+  items << {:label => 'Motor', :type => 'text', :id => 'engine', :required => true} 
+
+  items << {:label => 'Consulta', :type => 'textarea', :id => 'consult', :required => true}
+
+%form.contact-form.clearfix{:action=>'#', :method=>'post', :enctype=>"application/x-www-form-urlencoded"}
+  - items.each do |item|
+    .form-item
+      %label{:for=>"frm-" << item[:id]}
+        = item[:label]
+        - if (item[:required] == true)
+          %span.required
+            *
+      - if (item[:type] == 'textarea')
+        %textarea.textarea{:name=>"frm-" << item[:id], :id=>"frm-" << item[:id]}
+      - else
+        %input{:type=> item[:type], :class=> item[:type], :name=>"frm-" << item[:id], :id=>"frm-" << item[:id]}
+
+  %input.submit{:type=>"submit", :value=>"Enviar"}
