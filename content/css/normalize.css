@@ -251,3 +251,15 @@ td { vertical-align: top; }
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'HandelGothicDLightRegular';
+    src: url('../fonts/handelgotd-ligh-eot.eot');
+    src: url('../fonts/handelgotd-ligh-eot.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/handelgotd-ligh-woff.woff') format('woff'),
+         url('../fonts/handelgotd-ligh-ttf.ttf') format('truetype'),
+         url('../fonts/handelgotd-ligh-svg.svg#HandelGothicDLightRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
