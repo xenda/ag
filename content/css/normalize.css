@@ -240,3 +240,14 @@ td { vertical-align: top; }
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
 .clearfix { *zoom: 1; }
+
+@font-face {
+    font-family: 'HandelGothicDBold';
+    src: url('../fonts/handelgotd-bold-eot.eot');
+    src: url('../fonts/handelgotd-bold-eot.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/handelgotd-bold-woff.woff') format('woff'),
+         url('../fonts/handelgotd-bold-ttf.ttf') format('truetype'),
+         url('../fonts/handelgotd-bold-svg.svg#HandelGothicDBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

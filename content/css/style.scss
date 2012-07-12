@@ -321,11 +321,59 @@
 	position: relative;
 	z-index: 50;
 	height: $h;
-	overflow: hidden;
 	
 	.main-menu {
 	  height: $h;
-	}
+	  background: url(../images/menu.png);
+  }
+  
+  .secondary-item {
+    width: 167px;
+    float:left;
+    height: $h;
+    
+    a {
+      display:block;
+      width: 100%;
+      height: 100%;
+      text-indent: -999em;
+    }
+    
+    &:first-child,
+    &:last-child {
+      width: 166px;
+    }
+  }
+  
+  .sub-menu {
+    height: 205px;
+    display:none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: $h;
+    background: red;
+    
+    .header {
+      float:left;
+      height: 100%;
+      
+      .title {
+        text-transform:uppercase;
+        color:white;
+        font-weight: 20px;
+        font-family:'HandelGothicDBold';
+      }
+    }
+  }
+  
+  #sub-performance {
+    display: block;
+    
+    span {
+      color:#69DE29;
+    }
+  }
 }
 
 .wrapper {

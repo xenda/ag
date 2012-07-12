@@ -1,7 +1,7 @@
 :ruby
   items = Array.new
   
-  items << {:href=>'#', :text=>'personalizados', :id=>'per'}
+  items << {:href=>'#', :text=>'personalizados', :id=>'performance'}
   items << {:href=>'#', :text=>'originales', :id=>'ori'}
   items << {:href=>'#', :text=>'utilitarios', :id=>'uti'}
   items << {:href=>'#', :text=>'deportivos', :id=>'dep'}  
@@ -14,5 +14,5 @@
       %li.secondary-item<
         %a{:title=>item[:text], :href=>item[:href]}<
           Vehículos #{item[:text]}
-        .sub-menu{:id=>item[:id]}
+        .sub-menu{:id=>'sub-' << item[:id]}
           = render 'menu/' << item[:id]
