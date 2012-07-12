@@ -351,8 +351,14 @@
       width: 166px;
     }
     
-    &:hover .sub-menu {
-      display:block;
+    &:hover{
+      a{
+        background: blue;
+      }
+      
+      .sub-menu {
+        display:block;
+      }
     }
   }
   
@@ -365,6 +371,12 @@
     top: $h;
     background: url(../images/sub-bg.jpg);
     color:white;
+    
+    img {
+      position:absolute;
+      top:0;
+      right: 0;
+    }
     
     .header {
       float:left;
@@ -610,4 +622,29 @@
 	  .item-1 {margin-left: 20px;}
 	  .item-3 {margin-right: 20px;}
   }
+}
+
+#banner {
+	
+	.ads {
+	  position:absolute;
+    text-indent: -999em;
+    overflow: hidden;	
+	}
+	
+  .automechanika {
+    width: 157px;
+    height: 87px;
+    right: 25px;
+    bottom:24px;
+    background: url(../images/ads/automechanika.png)
+  }	
+	
+	.tuning-center {
+	  width: 157px;
+	  height: 51px;
+	  right: 25px;
+	  bottom:123px;
+	  background: url(../images/ads/tuning-center.png)
+	}
 }
