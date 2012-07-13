@@ -10,7 +10,7 @@
       %ul.clearfix
         - menus.each do |item|
           %li.item<
-            %a{:title=>item[:title], :href=> get_path << item[:href] << '.html'}<
+            %a{:title=>item[:title], :href=> get_path << item[:path] << item[:href] << '.html'}<
               = item[:title]
     %ul#language.header-nav
       %li.item

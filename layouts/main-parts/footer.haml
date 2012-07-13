@@ -30,9 +30,14 @@
               = item[:title]
             - if item[:submenus] != false
               %ul.sub-menu
+                :ruby
+                  path = '';
+                  if (@item[:selected] != item[:class])
+                    path = get_path << item[:class] << '/'
+                  end              
                 - item[:submenus].each do |sub|
-                  %li<
-                    %a{:title=>sub[:title], :href=>get_path << sub[:href] << '.html'}<
+                  %li<                     
+                    %a{:title=>sub[:title], :href=>path << sub[:href] << '.html'}<
                       = sub[:title]
     .footer-bottom
       .copyright<
