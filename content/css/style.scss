@@ -1,6 +1,7 @@
 @import 'css3';
 
 $text-color:#58595B;
+$line-color:#ACD3E9;
 
 aside {
 	width: 161px;
@@ -98,48 +99,6 @@ article {
 
 #container {
   
-  .entry {
-    background: white;
-    width: 615px;
-    float: right;
-    margin:-12px 55px 0 0;  
-    
-    $color: #0C7EBE;
-    
-    header {
-      color:$color;
-      margin-bottom: 15px;
-    }
-    h1{
-      font-style: italic;
-      text-transform: uppercase;
-      font-size: 19px;
-    }
-    h2 {
-      color:$color;
-      font-size: 16px;
-      margin-bottom: 5px;
-      margin-top: 27px;
-      
-      &:first-child {
-        margin-top:0;
-      }
-    }
-    
-    p {
-      font-size: 14px;
-      line-height: 28px;
-      margin-bottom: 10px;
-    }
-    
-    .dropline {
-      font-size: 16px;
-      font-weight: bold;
-      margin-bottom: 0;
-    } 
-    
-  }
-	
 	.header-container {
 	  position: relative;
     height:103px;
@@ -636,7 +595,7 @@ article {
 	}
 	
 	li {
-	  border-bottom: solid 1px #ACD3E9;
+	  border-bottom: solid 1px $line-color;
 	  height: 27px;
 	  line-height: 27px;
 	}
@@ -783,6 +742,99 @@ article {
 	  .item-1 {margin-left: 20px;}
 	  .item-3 {margin-right: 20px;}
   }
+}
+
+.entry {
+  background: white;
+  width: 615px;
+  float: right;
+  margin:-12px 55px 0 0;  
+  
+  $color: #0C7EBE;
+  
+  header {
+    color:$color;
+    margin-bottom: 15px;
+  }
+  h1{
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 19px;
+  }
+  h2 {
+    $m:27px;
+    color:$color;
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-top: $m;
+    
+    &:first-child {
+      margin-top:0;
+    }
+    
+    &.line {
+      padding-top: $m;
+      margin-top: 0;
+      border-top: solid 1px $line-color;
+    }
+  }
+  
+  ol {
+    list-style: decimal inside;
+    color:$color;
+    font-size: 16px;
+    font-weight:bold;
+    margin-top: 20px;
+    
+    h3 {
+      display:inline;
+	    color:$color;
+	    font-size: 16px;
+    }
+    
+    li {
+      margin-bottom: 20px;
+    }
+
+    p {
+      color:$text-color;
+      font-weight: normal;
+    }
+  }
+  
+  ul {
+    li {
+      margin-bottom: 20px;
+    }
+    
+    .title {
+      color:$color;
+    }
+    
+    p {
+      margin-bottom: 0;
+      line-height: 14px;
+    }
+  }
+  
+  p {
+    font-size: 14px;
+    line-height: 28px;
+    
+  }
+  
+  img,
+  p {
+    margin-bottom: 10px;
+  }
+  
+  
+  .dropline {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0;
+  } 
+  
 }
 
 #banner {
