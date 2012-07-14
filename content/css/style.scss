@@ -26,6 +26,20 @@ aside {
 	  }
 	}
 	
+	.contact-text {
+	  font-size: 14px;
+	  .title {
+	    color:#0C7EBE;
+	    padding-bottom: 10px;
+	    border-bottom: solid 1px $line-color; 
+	    margin-bottom: 10px;
+	  }
+	  
+	  .required {
+	    
+	  }
+	}
+	
 	.bullet {
 	  color:#0C7EBE;
 	}
@@ -770,7 +784,7 @@ article {
     width: $w - ($p*2);
     border:solid 1px #dadada;
     background: #dadada;
-    color:white;
+    color:black;
     border-top-color: #aaa;
     @include border_radius(5px);
   }
