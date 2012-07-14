@@ -36,8 +36,8 @@ parent: 'manufacturing'
         En el contexto de un mercado donde abundan los productos de baja performance, los estándares de calidad protegen y respaldan al consumidor. En el caso de un automotor, donde las piezas pueden modificar la dirección o la potencia del vehículo, los usuarios saben que la calidad es un factor clave para garantizar la seguridad de sus ocupantes. Sus preguntas más frecuentes son:
         %ul
           - values.each do |value|
-            %li
-              %span.bullet
+            %li.simple
+              %span.bullet &gt;
               = value[:text]
       %p<
         %strong<
