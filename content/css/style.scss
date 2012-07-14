@@ -744,6 +744,71 @@ article {
   }
 }
 
+.contact-form {
+	$w:460px;
+	
+	float: right;
+	width: $w;
+	margin-right: 210px;
+	
+  label,
+  input {
+    display:block;
+  }
+  
+  label {
+    height: 22px;
+    line-height: 28px;
+    font-size: 14px;
+    color:$text-color;
+  }
+  
+  input,
+  textarea {
+    $p:5px;
+    padding:$p;
+    width: $w - ($p*2);
+    border:solid 1px #dadada;
+    background: #dadada;
+    color:white;
+    border-top-color: #aaa;
+    @include border_radius(5px);
+  }
+  
+  input {
+    height: 15px;
+  }
+  
+  select {
+   width: 100%;
+   background: #9f9f9f;
+   border:solid 1px #9f9f9f;
+  }
+  
+  textarea {
+    height: 130px;
+  }
+
+  .form-item {
+    margin-bottom:5px;
+  }
+
+  .submit {
+    background: #EFEFEF;
+    border-color: #EFEFEF;
+    color: $text-color;
+    font-size: 14px;
+    margin-top: 20px;
+    height: 25px;
+    float:right;
+    width: 135px;
+    text-transform: lowercase;
+    padding: 0;
+    line-height: 25px;
+  }
+	
+}
+
 .entry {
   background: white;
   width: 615px;
