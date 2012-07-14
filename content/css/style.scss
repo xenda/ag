@@ -1,5 +1,35 @@
 @import 'css3';
 
+$text-color:#58595B;
+
+aside {
+	width: 161px;
+	float: left;
+	margin-left: 70px;
+	
+	.block {
+	  margin-bottom:32px;
+	  
+	  &:first-child {
+	    margin-top:-8px;
+	  }
+	}
+	
+	.online-catalog {
+	  a {
+	    display:block;
+	    width: 161px;
+	    height: 86px;
+	    background: url(../images/catalogo-online.jpg);
+	    text-indent: -999em;
+	  }
+	}
+	
+	.bullet {
+	  color:#0C7EBE;
+	}
+}
+
 #banner {
 	$h: 396px;
 	height: $h;
@@ -41,18 +71,83 @@
 	img {
     height: $h;
 	}
+	
+	.history {
+    background-image: url(../images/slide/historia.jpg);
+	}
+	
+  .philosophy {
+    background-image: url(../images/slide/filosofia.jpg);
+  }
+  
+  .quality {
+    background-image: url(../images/slide/calidad.jpg);
+  }
+  
+  .processes {
+    background-image: url(../images/slide/proceso.jpg);
+  }  
+  .technology {
+    background-image: url(../images/slide/tecnologia.jpg);
+  }   
 }
 
 #container {
 	
+  article {
+    background: white;
+    width: 615px;
+    float: right;
+  }	
 	
 	.header-container {
-	   height:103px;
-	  @include gradient_cross_v(#010101, #474747);
+	  position: relative;
+    height:103px;
+    @include gradient_cross_v(#010101, #474747);
+    margin-bottom:40px;	  
+    
+    h1 {
+      background: url(../images/base64/header.png);
+      width: 910px;
+      position: absolute;
+      margin: 0 auto;
+      left:0;
+      right:0;
+      bottom:-12px;
+      height: 85px;
+      font-family:'HandelGothicDLightRegular';
+      line-height: 75px;
+      font-size: 30px;
+      padding-left: 30px;
+    }
+    
+	  
+	  .bg-left,
+	  .bg-right {
+	    width:30px;
+	    height: 73px;
+	    background: url(../images/header-arrow.png);
+	    position: absolute;
+	    bottom: 0;
+	  }
+	  
+    .bg-left {
+      left:0;
+      background-position: right top;
+    }
+
+	  .bg-right {
+      right:0;
+	    background-position: left top;
+	  }
 	}
 	
-	.content {
-	 background: white;
+	#content {
+	   background: white url(../images/base64/content-shadow.png) 282px top repeat-y;
+	}
+	
+	.wrapper {
+	  background: white;
 	}
 }
 
@@ -64,7 +159,7 @@
 	$h: 258px;
 	$w:39px;
 	
-	/*display:none;*/
+	display:none;
 	
 	width:$w;
 	height:$h;
@@ -209,6 +304,7 @@
       
 	    a {
 	      text-transform: none;
+	      display:block;
 	    }
     }   
     
@@ -339,7 +435,7 @@
       text-align: center;
       text-transform: uppercase;
       line-height: 28px;
-      font-size: 10px;
+      font-size: 9px;
       color:white;
       font-family:'HandelGothicDLightRegular';
       text-decoration: none;
@@ -489,6 +585,26 @@
   }        
 }
 
+#sidebar-sub-menu {
+	
+	a {
+	  color:$text-color;
+	  text-decoration: none;
+	  font-size: 12px;
+	  display: block;
+    
+    &.selected {
+      color:#538CFF;
+    }	  
+	}
+	
+	li {
+	  border-bottom: solid 1px #ACD3E9;
+	  height: 27px;
+	  line-height: 27px;
+	}
+}
+
 .wrapper {
 	width: 1000px;
 	margin: 0 auto;
@@ -553,7 +669,17 @@
 .home {
 	
 	#container {
-	  $color:#58595B;
+	  
+	  .header-container {
+	    position: static;
+	    margin-bottom: 0;
+	  }
+	  
+	  #content {
+	    background: white;
+	    float: none;
+	    width: auto;
+	  }	  
 	  
 	  article {
 	    $w:318px;
@@ -562,7 +688,7 @@
 	    width: $w;
 	    float: left;
 	    margin-top: -82px;
-	    color:$color;
+	    color:$text-color;
 	    font-size:12px;
 	    min-height: 580px;
 	    
@@ -577,7 +703,7 @@
 	    }
 	    
 	    a {
-	      color:$color;
+	      color:$text-color;
 	    }
 	    
 	    .content {

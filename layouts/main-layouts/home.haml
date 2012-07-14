@@ -7,14 +7,14 @@
   
 %head
   = render 'main-parts/head'
-%body{:class=>@item[:selected] ,:data=>{:page => @item[:datapage]}}
+%body{:class=>@item[:class] ,:data=>{:page => @item[:datapage]}}
   .bg.bg-left
   .bg.bg-right
   = render 'main-parts/header'
   = render 'main-parts/menu'
   = render 'main-parts/banner'
   %section#container.main-shadow
-    .wrapper
+    .wrapper.clearfix
       = yield
   = render 'main-parts/footer'
   = render 'main-parts/scripts'  

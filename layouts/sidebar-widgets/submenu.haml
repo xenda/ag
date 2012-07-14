@@ -1,0 +1,19 @@
+:ruby
+  menus = get_menu
+  
+  sm = nil
+  
+  menus.each do |menu|
+    if (@item[:parent] == menu[:class])
+      sm = menu[:submenus]
+    end
+  end
+
+- if (sm != nil)
+  %section.block#sidebar-sub-menu
+    %ul
+      -sm.each do |sub|
+        %li
+          %a{:href => sub[:href] << '.html', :title => sub[:title], :class => ("selected" unless sub[:class] != @item[:class])}
+            %span.bullet &gt;
+            = sub[:title]

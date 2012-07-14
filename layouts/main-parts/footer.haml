@@ -25,19 +25,19 @@
             AG Resortes 
       %ul#footer-nav.clearfix
         - menus.each do |item|
-          %li.item<
-            %a{:title=>item[:title], :href=>get_path << item[:href] << '.html'}<
+          %li.item
+            %a{:class => ("selected" unless item[:class] != @item[:class]), :title=>item[:title], :href=> get_path << item[:path] << item[:href] << '.html'}<
               = item[:title]
             - if item[:submenus] != false
               %ul.sub-menu
                 :ruby
-                  path = '';
-                  if (@item[:selected] != item[:class])
-                    path = get_path << item[:class] << '/'
+                  path = String.new();
+                  if (@item[:parent] != item[:class])
+                    path = get_path <<  item[:path]
                   end              
                 - item[:submenus].each do |sub|
-                  %li<                     
-                    %a{:title=>sub[:title], :href=>path << sub[:href] << '.html'}<
+                  %li<                   
+                    %a{:class => ("selected" unless sub[:class] != @item[:class]), :title=>sub[:title], :href=> String.new(path << sub[:href] << '.html')}<
                       = sub[:title]
     .footer-bottom
       .copyright<

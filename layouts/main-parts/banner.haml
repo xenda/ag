@@ -1,11 +1,14 @@
 %section#banner
-  - if @item[:selected] == 'home'
+  
+  - if @item[:class] == 'home'
     #slide
       .slide-1.slide.active
       .slide-2.slide{:data => {:slide => 'slide-2'}}
-    
+  - else
+    #slide.slide{:class=>@item[:class]}
+        
   .main-shadow
-    - if @item[:selected] == 'home'
+    - if @item[:class] == 'home'
       .wrapper
         %a.ads.tuning-center{:href=>'#'}Tuning Center
         .ads.automechanika

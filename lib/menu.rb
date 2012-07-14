@@ -19,9 +19,9 @@ def get_menu
             :submenus=>submenus}  
 
   submenus = Array.new
-  submenus << {:href=>'calidad', :text=>'Calidad', :class=> 'quality'}
-  submenus << {:href=>'procesos', :text=>'Procesos', :class=> 'processes'}
-  submenus << {:href=>'tecnologia', :text=>'Tecnología', :class=> 'technology'}
+  submenus << {:href=>'calidad', :title=>'Calidad', :class=> 'quality'}
+  submenus << {:href=>'procesos', :title=>'Procesos', :class=> 'processes'}
+  submenus << {:href=>'tecnologia', :title=>'Tecnología', :class=> 'technology'}
 
   menus << {:title=>'Fabricación',
             :class=>'manufacturing',

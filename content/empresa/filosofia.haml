@@ -1,7 +1,7 @@
 ---
 title: 'titulo'
-page: 'home'
-class: 'home'
+class: 'philosophy'
+parent: 'company'
 ---
 
 :ruby
@@ -17,38 +17,26 @@ class: 'home'
 %header.header-container
   .bg-left
   .bg-right
-  %h1
+  %h1 Empresa
   
-.content
-  #content
-    %article
-      %header
-        %h1 Historia
-        %p.dropline
-          AG es hoy una empresa líder en la producción de resortes de suspensión. Pero, como sucede en toda gran empresa, sus comienzos son modestos.
-      .content
-        %p En los años ´50, Aniceto Gómez, con visión de pionero, transformó un taller de resortes industriales pequeños en una compañía dedicada a la elaboración de resortes de suspensión automotriz, y prontamente cosechó un éxito significativo. Con el foco puesto en la excelencia, en la década del 60 AG fue la primera organización en su rubro en dar garantía escrita para sus productos.
-        %p En los años ´70, comenzó la preparación de vehículos urbanos, bajando el auto a través del corte de los resortes de suspensión. Para solucionar los problemas que producía esta técnica, AG diseñó una línea de resortes más bajos y fuertes, llamada “Rally”, que revolucionó el segmento. A principios de los años ´80 se empezó a utilizar el GNC como combustible para automotores. Anticipándose a las necesidades de los usuarios, AG fue la primera en desarrollar una suspensión reforzada.
-        %p En la década del 90, la firma consolidó su liderazgo y se insertó en el competitivo mercado internacional. Bajo el pilar de la mejora continua, en 1999 la empresa certificó el sistema de calidad bajo la norma ISO 9001, y hasta hoy es la única organización en obtenerla para el mercado de reposición de resortes de suspensión.
-        %p Como respuesta a la evolución tecnológica, los mercados cada vez más exigentes y el auge del tunning,  AG desarrolló una revolucionaria línea de resortes que baja el auto sin sacrificar el confort de marcha. AG Kit Progresivo es el primer resorte latinoamericano de su clase que logró ingresar con fuerza en un mercado competitivo y exigente como el norteamericano.
-        %p AG abastece al 80% del mercado argentino y sus productos se exportan a Argelia, Brasil, Canadá, Colombia, Chile, Ecuador, Egipto, EEUU, México, Uruguay, Paraguay y Puerto Rico.
-    
-    %article
-      %header
-        %h1 Filosofía
-        %p.dropline
-          Cada una de las acciones que emprendemos y las ideas que nos inspiran se apoyan en los pilares centrales de nuestra Misión, Visión y Valores.
-      .content
-        %h2 Misión
-        %p Ser una de las empresas líderes en fabricación de resortes a nivel mundial, entregando el máximo valor en cada producto.
-        %h2 Visión
-        %p Transformar la empresa AG en sinónimo de confort y seguridad para los usuarios, de orgullo para los empleados y de satisfacción para los dueños.
-        %h2 Valores
-        %ul
-          - values.each do |value|
-            %li
-              %p.title
-                = value[:title]
-              %p.text
-                = value[:text]
+#content.clearfix
+  %article
+    %header
+      %h1 Filosofía
+      %p.dropline
+        Cada una de las acciones que emprendemos y las ideas que nos inspiran se apoyan en los pilares centrales de nuestra Misión, Visión y Valores.
+    .content
+      %h2 Misión
+      %p Ser una de las empresas líderes en fabricación de resortes a nivel mundial, entregando el máximo valor en cada producto.
+      %h2 Visión
+      %p Transformar la empresa AG en sinónimo de confort y seguridad para los usuarios, de orgullo para los empleados y de satisfacción para los dueños.
+      %h2 Valores
+      %ul
+        - values.each do |value|
+          %li
+            %p.title
+              = value[:title]
+            %p.text
+              = value[:text]
   %aside
+    = render 'sidebar/institucional'
