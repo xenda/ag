@@ -30,6 +30,10 @@ aside {
 	}
 }
 
+article {
+  color: $text-color	
+}
+
 #banner {
 	$h: 396px;
 	height: $h;
@@ -93,12 +97,48 @@ aside {
 }
 
 #container {
-	
-  article {
+  
+  .entry {
     background: white;
     width: 615px;
     float: right;
-  }	
+    margin:-12px 55px 0 0;  
+    
+    $color: #0C7EBE;
+    
+    header {
+      color:$color;
+      margin-bottom: 15px;
+    }
+    h1{
+      font-style: italic;
+      text-transform: uppercase;
+      font-size: 19px;
+    }
+    h2 {
+      color:$color;
+      font-size: 16px;
+      margin-bottom: 5px;
+      margin-top: 27px;
+      
+      &:first-child {
+        margin-top:0;
+      }
+    }
+    
+    p {
+      font-size: 14px;
+      line-height: 28px;
+      margin-bottom: 10px;
+    }
+    
+    .dropline {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 0;
+    } 
+    
+  }
 	
 	.header-container {
 	  position: relative;
@@ -142,10 +182,6 @@ aside {
 	  }
 	}
 	
-	#content {
-	   background: white url(../images/base64/content-shadow.png) 282px top repeat-y;
-	}
-	
 	.wrapper {
 	  background: white;
 	}
@@ -153,6 +189,7 @@ aside {
 
 #content {
 	padding-bottom: 25px;
+	background: white url(../images/base64/content-shadow.png) 282px top repeat-y;
 }
 
 #fixed {
@@ -688,7 +725,6 @@ aside {
 	    width: $w;
 	    float: left;
 	    margin-top: -82px;
-	    color:$text-color;
 	    font-size:12px;
 	    min-height: 580px;
 	    
@@ -740,7 +776,6 @@ aside {
 	      
 	      p {
 	        font-weight: normal;
-	        margin: 0;
 	      }
 	    }   
 	  }

@@ -1,0 +1,33 @@
+---
+title: 'titulo'
+class: 'technology'
+parent: 'manufacturing'
+---
+
+:ruby
+  values = Array.new
+  
+  values << {:text => '¿Cabrá?'}
+  values << {:text => '¿Se romperá?'}
+  values << {:text => '¿Funcionará bien?'}
+  values << {:text => '¿Es seguro?'}
+  
+%header.header-container
+  .bg-left
+  .bg-right
+  %h1
+    %span Fabricación
+  
+#content.clearfix
+  %article.entry
+    %header
+      %h1 Tecnología
+    .content
+      %p Las técnicas iniciales de producción manual, semiartesanales, fueron cambiando progresivamente hacia un manejo más eficaz de la ingeniería, generando condiciones para obtener una producción dinámica, adecuada a la amplia variedad de modelos y estrictas normas de calidad que el mercado demanda.
+      %p AG siempre buscó estar en sintonía con los nuevos desarrollos para capitalizar sus ventajas y poder ofrecer nuevos beneficios a los consumidores.
+      %p Pero el impulso cualitativo se produjo a partir del desarrollo local de una máquina innovadora a nivel mundial. El equipo trabaja con control numérico y, aunque hay otros que usan este sistema, se trata de una máquina única en su especie. Esta tecnología le permite a AG desarrollar un modelo de producción flexible, ya que se puede cambiar el diseño de los resortes muy fácilmente, mientras que las otras máquinas necesitan una matriz para cada tipo de producto. 
+      %p El nuevo equipamiento comenzó a operar en abril de 2005 y cambió radicalmente la capacidad productiva, que creció en un 70%. Lo que antes se hacía en tres turnos, ahora puede hacerse en uno; y si antes se procesaban 1.700 toneladas de acero, actualmente se procesan más de 2.000.
+      %p Las mejoras tecnológicas que fuimos incorporando nos permitieron ser los únicos en brindar dos años de garantía sobre nuestros productos para estar en línea con los más altos requerimientos internacionales.              
+      
+  %aside
+    = render 'sidebar/institucional'

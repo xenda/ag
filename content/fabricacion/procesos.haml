@@ -1,0 +1,57 @@
+---
+title: 'titulo'
+class: 'processes'
+parent: 'manufacturing'
+---
+
+:ruby
+  values = Array.new
+  
+  values << {:text => '¿Cabrá?'}
+  values << {:text => '¿Se romperá?'}
+  values << {:text => '¿Funcionará bien?'}
+  values << {:text => '¿Es seguro?'}
+  
+%header.header-container
+  .bg-left
+  .bg-right
+  %h1
+    %span Fabricación
+  
+#content.clearfix
+  %article.entry
+    %header
+      %h1 Procesos
+    .content
+      %h2 Proceso de fabricación
+      %p Los resortes AG son arrollados en caliente a 900ºC. Nuestra empresa cuenta con una máquina de arrollado única en Argentina y el mundo, desarrollada en conjunto entre nuestros ingenieros e ingenieros de Siemens, que brindaron su experiencia en aplicaciones CNC.
+      %ol
+        %li
+          Arrollado en caliente
+          %p El arrollado es el proceso donde la barra de acero de alta calidad toma la forma final de espiral. En AG utilizamos un sistema automático de arrollado, comandado por CNC, que está capacitado para procesar más de 2000 tn de acero al año. 
+          %P En el diseño de este proceso, se buscó garantizar el conformado del acero a la temperatura ideal, para luego poder realizar el temple a la temperatura correcta. Este es uno de los procedimientos más críticos en la fabricación del resorte, y para asegurar la calidad de nuestros productos disponemos de la mejor tecnología.
+        %li
+          Templado y revenido
+          %p El templado es un proceso que endurece y consolida el acero. Consiste en enfriar rápidamente el resorte desde los 900ºC a temperaturas cerca de los 60ºC.
+          %p Luego, en el revenido el resorte es llevado a 400ºC durante un tiempo controlado, donde el acero regenera su estructura interna eliminando tensiones y logrando elasticidad. Este proceso mejora la consistencia de la estructura interna para eliminar la posibilidad de puntos débiles dentro del resorte.
+        %li
+          Shot Peening
+          %p El shot peening es un procedimiento mediante el cual se disparan micro-esferas de acero contra el resorte, eliminando posibles micro-fisuras en el acero, esto aumenta la vida útil del resorte un 300%. Además le da un acabado parejo al material
+          %p En virtud del granallado automático, los resortes son tratados individualmente para asegurar cobertura máxima y uniforme durante el proceso.
+        %li
+          Rectificado
+          %p En ciertos resortes, como los regulables, los extremos son rectificados a plano. En AG empleamos una rectificadora de bases de alta capacidad, con un disco de 1,2 metros de diámetro donde se rectifican los resortes.
+        %li
+          Prensado al bloqueo
+          %p El prensado a tope del resorte es parte del proceso de prueba final, luego de la producción. Comprimir el resorte hasta que sus espiras se junten, asegura que la pieza no modificará su altura durante el uso en el vehículo. Esto impide que el resorte pueda ceder o deformarse. 
+          %p Somos el único fabricante del país es usar este proceso, ya que nuestras exigentes normas de calidad garantizan un resorte confiable y seguro.
+        %li
+          Medición y prueba de carga
+          %p Cada resorte se mide y luego se prueba su carga para asegurar que está acorde a sus especificaciones.
+          %p Esto asegura la conformidad y homogeneidad del lote de producción. Estos pasos adicionales constituyen nuestro sello de calidad, ya que nuestros procesos de fabricación están certificados en ISO 9001.
+        %li
+          Pintura Epoxy
+          %p Luego de la producción e inspección, los resortes son pintados con pintura Epoxy en polvo a través de un método electroestático que asegura la cobertura en el 100% de la superficie del resorte. 
+          %p Esta pintura brinda una gran protección contra el óxido y representa un importante diferencial de nuestros productos tanto a nivel nacional como internacional.
+  %aside
+    = render 'sidebar/institucional'

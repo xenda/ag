@@ -4,16 +4,6 @@ class: 'history'
 parent: 'company'
 ---
 
-:ruby
-  values = Array.new
-  
-  values << {:title => 'Experiencia', :text => 'La trayectoria respalda cada una de nuestras acciones.'}
-  values << {:title => 'Honestidad', :text => 'Somos transparentes y cumplimos con nuestra palabra.'}
-  values << {:title => 'Flexibilidad', :text => 'Nos adaptamos a cada nueva exigencia de mercado con la máxima rapidez.'}
-  values << {:title => 'Compromiso', :text => 'Creamos vínculos de largo plazo con nuestros clientes.'}
-  values << {:title => 'Innovación', :text => 'Siempre buscamos nuevos caminos para encontrar mejores soluciones.'}  
-
-
 %header.header-container
   .bg-left
   .bg-right
@@ -21,7 +11,7 @@ parent: 'company'
     %span Empresa
   
 #content.clearfix
-  %article
+  %article.entry
     %header
       %h1 Historia
       %p.dropline
