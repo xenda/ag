@@ -3,6 +3,22 @@ title: 'titulo'
 class: 'product-performance'
 ---
 
+:ruby
+  values = Array.new
+  
+  values << {:title => 'Respuesta en aceleración',
+             :text => 'La mejor distribución de cargas reduce el cabeceo, con lo que mejora la respuesta en aceleración.',
+             :img => 'aceleration.jpg'}  
+  values << {:title => 'Mejora de performance',
+             :text => 'La aerodinámica del vehículo mejora, y con ello la performance.',
+             :img => 'performance.jpg'}
+  values << {:title => 'Respuesta de frenado',
+             :text => 'Se reduce la distancia y mejora el control durante el frenado, evitando que se baje la nariz del vehículo.',
+             :img => 'braking.jpg'}
+  values << {:title => 'Mejora de tenida',
+             :text => 'La baja del centro de gravedad mejora la tenida, obteniendo mayor estabilidad y respuesta de maniobra.',
+             :img => 'tenida.jpg'}
+  
 %header.header-container
   .bg-left
   .bg-right
@@ -11,6 +27,17 @@ class: 'product-performance'
   
 #content.clearfix
   %article.entry
+    .content
+      %h1.entry-title La opción profesional para un tuning inteligente y seguro.
+      %p En un buen tuning, no sólo es importante que el auto se vea bien. Es necesario que performance y respuesta se vean mejoradas en cada modiﬁcación. Y que, además, esto no comprometa la vida útil de las partes, ni la seguridad de los pasajeros sino que las mejore.
+      %ul.has-img
+        - values.each do |value|
+          %li.clearfix
+            %img{:src=>'../images/products/' << value[:img], :title=>value[:title], :alt=>value[:title], :width=>'131', :height=>'86'}
+            %p.title
+              = value[:title]
+            %p.text
+              = value[:text]
       
   %aside
     = render 'sidebar/productos', :list => get_performance
