@@ -1,5 +1,3 @@
-- menus = get_menu
-
 %footer#footer.main-shadow
   .wrapper
     .footer-top
@@ -24,20 +22,22 @@
             %span.facebook-logo
             AG Resortes 
       %ul#footer-nav.clearfix
-        - menus.each do |item|
+        - get_menu.each do |item|
+          - class_value   = item[:class] == @item[:class] ? "selected" : ""f 
+          - top_menu_path = get_path + item[:path] + item[:href] + '.html'
           %li.item
-            %a{:class => ("selected" unless item[:class] != @item[:class]), :title=>item[:title], :href=> get_path << item[:path] << item[:href] << '.html'}<
+            %a{:class => class_value, :title=>item[:title], :href=> top_menu_path }<
               = item[:title]
             - if item[:submenus] != false
               %ul.sub-menu
                 :ruby
-                  path = String.new();
-                  if (@item[:parent] != item[:class])
-                    path = get_path <<  item[:path]
-                  end              
+                  path = ""
+                  path = get_path + item[:path] if @item[:parent] != item[:class]
                 - item[:submenus].each do |sub|
+                  - item_class = sub[:class] == @item[:class] ? "selected" : ""
+                  - item_path  = path + sub[:href] + '.html' 
                   %li<                   
-                    %a{:class => ("selected" unless sub[:class] != @item[:class]), :title=>sub[:title], :href=> String.new(path << sub[:href] << '.html')}<
+                    %a{:class => item_class, :title=>sub[:title], :href=> item_path }<
                       = sub[:title]
     .footer-bottom
       .copyright<
